@@ -72,29 +72,21 @@ This project is about image classification about ResNet and FC on Cifar-10 datas
     
 Train model named fc3 whose network is fc-3 with batchsize=400
 
-    ~~~
     python train.py batch_size 400 model fc3 network fc_3
-    ~~~
 
 Train model named res101 whose network is res-101 with batchsize=200
 
-    ~~~
     python train.py batch_size 200 model res101 network res_101
-    ~~~
 
 ### Testing
    
 Test model res101
 
-    ~~~
     python train.py --test batch_size 400 model res101 network res_101
-    ~~~
 
 ### Visualization
 
 Visualize outputs of model res101
 
-    ~~~
     python train.py --test --vis batch_size 400 model res101 network res_101
-    ~~~
 
