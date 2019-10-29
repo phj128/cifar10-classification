@@ -16,13 +16,13 @@ This project is about image classification about ResNet and FC on Cifar-10 datas
 |    FC-8    |    51.78     |
 |    FC-10   |    35.41     |
 |   Res-18   |    91.62     |
-|   Res-34   |   *92.25*    |
+|   Res-34   |   **92.25**  |
 |   Res-50   |    90.53     |
 |   Res-101  |    91.76     |
 
 ## Installation
 
--This code was built on Ubuntu 16.04 with [Anaconda](https://www.anaconda.com/download) Python 3.6 and [PyTorch]((http://pytorch.org/)) v1.1. 
+-This code was built on Ubuntu 16.04 with [Anaconda](https://www.anaconda.com/download) Python 3.6 and [PyTorch](http://pytorch.org/) v1.1. 
 
 -NVIDIA GPU is needed for both training and testing. 
 
@@ -72,29 +72,29 @@ This project is about image classification about ResNet and FC on Cifar-10 datas
     
     Train model named fc3 whose network is fc-3 with batchsize=400
 
-    ```shell
+    ~~~
     python train.py batch_size 400 model fc3 network fc_3
-    ```
+    ~~~
 
     Train model named res101 whose network is res-101 with batchsize=200
 
-    ```shell
+    ~~~
     python train.py batch_size 200 model res101 network res_101
-    ```
+    ~~~
 
 ### Testing
    
     Test model res101
 
-    ```shell
+    ~~~
     python train.py --test batch_size 400 model res101 network res_101
-    ```
+    ~~~
 
 ### Visualization
 
     Visualize outputs of model res101
 
-    ```shell
+    ~~~
     python train.py --test --vis batch_size 400 model res101 network res_101
-    ```
+    ~~~
 
