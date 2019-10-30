@@ -31,6 +31,8 @@ This project is about image classification about ResNet and FC on Cifar-10 datas
 
 0. [Recommended] Create a new conda environment.
 
+    It's recommended if you change your anaconda source to Tsinghua source.
+
     ~~~
     conda create -n cifar10 python=3.6
     ~~~
@@ -44,27 +46,33 @@ This project is about image classification about ResNet and FC on Cifar-10 datas
 1. Install pytorch.1.1.
 
     ~~~
-    conda install pytorch=1.1 torchvision
+    conda install pytorch=1.1 torchvision cudatoolkit=10.0
     ~~~
 
     Or from source
    
     ~~~
-    conda install pytorch=1.1 torchvision -c pytorch
+    conda install pytorch=1.1 torchvision cudatoolkit=10.0 -c pytorch
     ~~~
 
 2. Install dependencies.
  
     ~~~
-    pip install numpy matplotlib opencv-python yacs 
+    pip install matplotlib yacs tqdm
     ~~~
 
     Or from Tsinghua source:
    
     ~~~
-    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy matplotlib opencv-python yacs 
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple matplotlib yacs tqdm
     ~~~
 
+3. Create directories for data and models:
+    
+    ```shell
+    mkdir data
+    mkdir work_dirs
+    ```
 
 ## Getting started
 
