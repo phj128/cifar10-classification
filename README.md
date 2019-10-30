@@ -98,3 +98,4 @@ Visualize outputs of model res101
 
     python train.py --test --vis batch_size 400 model res101 network res_101
 
+The output of visualization will be saved in *work_dirs/model_name/vis/* 

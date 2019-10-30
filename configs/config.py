@@ -31,11 +31,13 @@ cfg.val_acc = []
 cfg.test_epoch = -1
 cfg.test_train = False
 
+
 def make_cfg(args):
     cfg.merge_from_list(args.opts)
     os.environ['CUDA_VISIBLE_DEVICES'] = cfg.gpu
     cfg.model_dir = os.path.join(cfg.work_dirs, cfg.model)
     cfg.result_dir = os.path.join(cfg.model_dir, 'result')
+    cfg.vis_dir = os.path.join(cfg.model_dir, 'vis')
     return cfg
 
 

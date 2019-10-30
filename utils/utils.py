@@ -74,6 +74,7 @@ def save_result():
 def visuzlization(network, data_loader):
     mean, std = (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)
     network.eval()
+    os.system('mkdir -p {}'.format(cfg.vis_dir))
     for data in tqdm(data_loader):
         images, labels = data
         outputs = network(images.cuda())
@@ -86,5 +87,6 @@ def visuzlization(network, data_loader):
             image = images[i].permute(1, 2, 0).cpu().numpy()
             image = unnorm(image, mean, std)
             plt.imshow(image)
-            plt.title("GT: {}\n".format(CLASSES[labels[i]]) + "Pred: {}".format(CLASSES[predicted[i]]))
+            plt.title("GT: {}  ".format(CLASSES[labels[i]]) + "Pred: {}".format(CLASSES[predicted[i]]))
+            plt.savefig(os.path.join(cfg.vis_dir, 'vis_{}.png'.format(i)))
             plt.show()
