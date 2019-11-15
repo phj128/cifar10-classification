@@ -5,7 +5,7 @@
 
 This is my personal project in **Introduction of Artificial Intelligence**.
 
-This project is about image classification about ResNet and FC on Cifar-10 dataset.
+This project is about image classification about ResNet(slightly different) and FC on Cifar-10 dataset.
 
 ## Results
 
